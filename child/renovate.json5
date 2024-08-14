@@ -1,0 +1,11 @@
+{
+  "extends": ["config:base"],
+  "commitMessage": "chore(deps): {{depName}} {{upgradeType}} to {{newVersion}}",
+  "gitAuthor": "Renovate Bot <renovate@example.com>",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "groupName": "dependencies"
+    }
+  ]
+}

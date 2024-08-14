@@ -27,6 +27,48 @@ LOG_LEVEL=DEBUG npx renovate --platform=local
 
 
 popd
+```
 
+Upon running the `npx renovate` command, you should notice the following error:
 
+```json
+{
+         "maven": [
+           {
+             "datasource": "maven",
+             "packageFile": "pom.xml",
+             "deps": [
+               {
+                 "datasource": "maven",
+                 "depName": "com.coveo:parent",
+                 "currentValue": "1.0-SNAPSHOT",
+                 "fileReplacePosition": 514,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depType": "parent",
+                 "updates": [],
+                 "packageName": "com.coveo:parent",
+                 "versioning": "maven",
+                 "warnings": [
+                   {
+                     "topic": "com.coveo:parent",
+                     "message": "Failed to look up maven package com.coveo:parent"
+                   }
+                 ]
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.json4s:json4s-core_${scala-parent.scala-lib.version}",
+                 "currentValue": "4.0.7",
+                 "fileReplacePosition": 965,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depType": "compile",
+                 "skipReason": "name-placeholder",
+                 "updates": [],
+                 "packageName": "org.json4s:json4s-core_${scala-parent.scala-lib.version}"
+               }
+             ],
+             "packageFileVersion": "1.0-SNAPSHOT"
+           }
+         ]
+       }
 ```
